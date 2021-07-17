@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="button" onclick="Stop()" value="Stop Random">
+	<script type="text/javascript">
+		//setTimeout(function, miniseconds); hàm chạy 1 lần duy nhất
+		//setInterval(function, miniseconds); chạy hàm lặp lại mãi mãi
+		var st = setTimeout(
+				function(){
+					// viết nội dung cho hàm ở đây
+					// location.assign("https://www.youtube.com/");
+					console.log('Gọi lệnh tự động chuyển trang');
+				},5000
+			)
+
+		var si = setInterval(
+				function(){
+					console.log('Lặp lại ramdom ' + Math.random());
+				},1000
+				)
+
+		function Stop(){
+			clearInterval(si);
+
+			clearTimeout(st);
+		}
+
+
+	</script>
+</body>
+</html>

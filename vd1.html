@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 onclick="show_qc()">Xem quảng cáo</h1>
+	<input type="button" onclick="TatQC()" value="Tắt quảng cáo">
+	<input type="button" onclick="ResizeW()" value="Đổi kích thước">
+	<input type="button" onclick="KiemTra()" value="Kiểm tra">
+
+	<script type="text/javascript">
+		var obj_new_win;
+
+		function show_qc(){
+			obj_new_win = window.open('https://www.youtube.com','QC','width=300,height=400');
+		}
+
+		function TatQC(){
+			obj_new_win.close();
+		}
+
+		function ResizeW(){
+			obj_new_win.ResizeTo(600,500);
+		}
+
+		function KiemTra(){
+			if (obj_new_win.closed) {
+				alert('đã đóng');
+			} else{
+				alert('chưa đóng');
+			}
+		}
+	</script>
+</body>
+</html>

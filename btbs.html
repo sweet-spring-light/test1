@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đếm ngược</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<center><h1 id="gt1"></h1></center>
+	
+	<script type="text/javascript">
+		// B1: Dùng hàm prompt để nhập giá trị và chuyển về kiểu số, biến này phải được khai báo toàn cục (ngoài các hàm)
+		// B2: Viết hàm setInterval với thời gian 1 giây (1000 miniseconds), trong hàm của interval thực hiện trừ 1 đơn vị và gán giá trị mới cho 1 thẻ textbox hoặc thẻ html khác (dùng innerHTML hoặc .value);
+		// B3: Trong hàm  của interval kiểm tra, nếu số nhập đã trừ về 0 thì clearInterval.
+
+		var a = prompt("Vui lòng nhập số :");
+		a = Number(a);
+
+		document.getElementById('gt1').innerHTML = a;
+		var si = setInterval(
+				function(){
+					if (a == 0) {
+						clearInterval(si);
+						return;
+						
+					}
+					a--;
+					document.getElementById('gt1').innerHTML = a;
+				},1000	
+			)
+
+		
+
+		
+	</script>
+</body>
+</html>
